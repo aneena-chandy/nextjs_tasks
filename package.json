@@ -1,0 +1,11 @@
+{
+  "name": "nextjs_tasks",
+  "version": "1.0.0",
+  "description": "JavaScript learning examples",
+  "type": "module",
+  "scripts": {
+    "start": "node fetch_get.js",
+    "fetch": "node fetch_post.js",
+    "error": "node fetch_error_handling.js"
+  }
+}
