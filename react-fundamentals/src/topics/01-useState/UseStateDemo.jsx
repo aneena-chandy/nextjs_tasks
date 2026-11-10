@@ -6,7 +6,7 @@ function UseStateDemo() {
 
     return (
         <div>
-            <h1>React useState Tutorial</h1>
+            <h2>React useState Tutorial</h2>
 
             <hr />
 
