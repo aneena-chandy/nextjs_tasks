@@ -5,7 +5,7 @@ function Dashboard() {
 
     const topics = [
         {
-            number: "00",
+            number: "01",
             title: "Portfolio Components",
             description: "Personal React components and reusable UI.",
             path: "/portfolio",
@@ -14,7 +14,7 @@ function Dashboard() {
             examples: "4 Examples"
         },
         {
-            number: "01",
+            number: "02",
             title: "Components & Props",
             description: "JSX, reusable components, props and children.",
             path: "/components",
@@ -23,7 +23,7 @@ function Dashboard() {
             examples: "8 Examples"
         },
         {
-            number: "02",
+            number: "03",
             title: "Local State Management",
             description: "Manage component data using useState Hook.",
             path: "/use-state",
@@ -32,7 +32,7 @@ function Dashboard() {
             examples: "1 Example"
         },
         {
-            number: "03",
+            number: "04",
             title: "Event Handling",
             description: "Handle clicks, inputs, forms and user interactions.",
             path: "/event-handling",
@@ -41,7 +41,7 @@ function Dashboard() {
             examples: "5 Examples + Tasks"
         },
         {
-            number: "04",
+            number: "05",
             title: "Conditional Rendering",
             description: "Display dynamic UI based on conditions.",
             path: "/conditional-rendering",

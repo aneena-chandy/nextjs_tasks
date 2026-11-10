@@ -654,6 +654,57 @@ select {
     background: #1d4ed8;
 }
 
+/* Character Counter */
+
+.character-counter {
+    width: 100%;
+}
+
+.character-counter textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.character-counter textarea:focus {
+    border-color: #6366f1;
+}
+
+.character-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.character-warning {
+    color: #d97706;
+    background: #fef3c7;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.character-limit {
+    color: #dc2626;
+    background: #fee2e2;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
 
 /* ==========================================
    TABLET RESPONSIVE

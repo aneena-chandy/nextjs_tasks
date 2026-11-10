@@ -6,6 +6,7 @@ import CounterExample from "../topics/02-event-handling/CounterExample";
 import InputExample from "../topics/02-event-handling/InputExample";
 import FormExample from "../topics/02-event-handling/FormExample";
 import LikeButton from "../topics/02-event-handling/LikeButton";
+import CharacterCounter from "../topics/02-event-handling/CharacterCounter";
 
 function EventHandlingPage() {
 
@@ -34,6 +35,9 @@ function EventHandlingPage() {
 
             <ExampleCard title="Task 01 - Like Button" description="Practice useState and onClick events.">
                 <LikeButton />
+            </ExampleCard>
+            <ExampleCard title="Task 02 - Character Counter" description="Track character count and enforce a maximum limit.">
+                <CharacterCounter />
             </ExampleCard>
 
         </TopicPageLayout>
