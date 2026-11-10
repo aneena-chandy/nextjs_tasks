@@ -8,6 +8,7 @@ import FormExample from "../topics/02-event-handling/FormExample";
 import LikeButton from "../topics/02-event-handling/LikeButton";
 import CharacterCounter from "../topics/02-event-handling/CharacterCounter";
 import LoginForm from "../topics/02-event-handling/LoginForm";
+import TodoApp from "../topics/02-event-handling/TodoApp";
 
 function EventHandlingPage() {
 
@@ -42,6 +43,12 @@ function EventHandlingPage() {
             </ExampleCard>
              <ExampleCard title="Task 03 - Login Form Validation" description="Validate empty fields and display conditional error and success messages.">
                 <LoginForm />
+            </ExampleCard>
+            <ExampleCard
+                title="Task 04 - Mini Todo Application"
+                description="Add tasks, display the task list, delete tasks, and track the total count."
+            >
+                <TodoApp />
             </ExampleCard>
 
         </TopicPageLayout>

@@ -4,8 +4,17 @@ import "../App.css";
 function Dashboard() {
 
     const topics = [
-        {
+         {
             number: "01",
+            title: "Interview Questions & Answers",
+            description: "Prepare for React interviews with topic-wise questions, detailed answers and code examples.",
+            path: "/interview-questions",
+            color: "overview-purple",
+            icon: "🎯",
+            examples: "Question Bank"
+        },
+        {
+            number: "02",
             title: "Portfolio Components",
             description: "Personal React components and reusable UI.",
             path: "/portfolio",
@@ -14,7 +23,7 @@ function Dashboard() {
             examples: "4 Examples"
         },
         {
-            number: "02",
+            number: "03",
             title: "Components & Props",
             description: "JSX, reusable components, props and children.",
             path: "/components",
@@ -23,7 +32,7 @@ function Dashboard() {
             examples: "8 Examples"
         },
         {
-            number: "03",
+            number: "04",
             title: "Local State Management",
             description: "Manage component data using useState Hook.",
             path: "/use-state",
@@ -32,7 +41,7 @@ function Dashboard() {
             examples: "1 Example"
         },
         {
-            number: "04",
+            number: "05",
             title: "Event Handling",
             description: "Handle clicks, inputs, forms and user interactions.",
             path: "/event-handling",
@@ -41,7 +50,7 @@ function Dashboard() {
             examples: "5 Examples + Tasks"
         },
         {
-            number: "05",
+            number: "06",
             title: "Conditional Rendering",
             description: "Display dynamic UI based on conditions.",
             path: "/conditional-rendering",
@@ -49,6 +58,7 @@ function Dashboard() {
             icon: "🔀",
             examples: "4 Examples"
         }
+       
     ];
 
     return (

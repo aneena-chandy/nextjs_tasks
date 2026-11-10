@@ -6,6 +6,7 @@ import ComponentsPage from "./pages/ComponentsPage";
 import UseStatePage from "./pages/UseStatePage";
 import EventHandlingPage from "./pages/EventHandlingPage";
 import ConditionalRenderingPage from "./pages/ConditionalRenderingPage";
+import InterviewQuestionsPage from "./pages/InterviewQuestionsPage";
 
 import "./App.css";
 
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/event-handling" element={<EventHandlingPage />} />
 
                 <Route path="/conditional-rendering" element={<ConditionalRenderingPage />} />
+                <Route path="/interview-questions" element={<InterviewQuestionsPage />}/>
 
             </Routes>
 
