@@ -598,6 +598,62 @@ select {
     color: #61dafb;
 }
 
+/* Dashboard topic cards */
+
+.overview-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.overview-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard-topic-icon {
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.topic-example-count {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 12px;
+    color: #64748b;
+}
+
+.overview-link {
+    margin-top: 18px;
+    font-weight: 600;
+}
+
+/* Back to Dashboard */
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: #1d4ed8;
+}
+
 
 /* ==========================================
    TABLET RESPONSIVE
