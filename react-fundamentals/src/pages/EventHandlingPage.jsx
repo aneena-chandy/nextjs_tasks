@@ -7,6 +7,7 @@ import InputExample from "../topics/02-event-handling/InputExample";
 import FormExample from "../topics/02-event-handling/FormExample";
 import LikeButton from "../topics/02-event-handling/LikeButton";
 import CharacterCounter from "../topics/02-event-handling/CharacterCounter";
+import LoginForm from "../topics/02-event-handling/LoginForm";
 
 function EventHandlingPage() {
 
@@ -38,6 +39,9 @@ function EventHandlingPage() {
             </ExampleCard>
             <ExampleCard title="Task 02 - Character Counter" description="Track character count and enforce a maximum limit.">
                 <CharacterCounter />
+            </ExampleCard>
+             <ExampleCard title="Task 03 - Login Form Validation" description="Validate empty fields and display conditional error and success messages.">
+                <LoginForm />
             </ExampleCard>
 
         </TopicPageLayout>
