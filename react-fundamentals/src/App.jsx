@@ -126,10 +126,22 @@ import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Card from "./Card";
+import UserCard from "./UserCard";
+import Product from "./Product";
+import Skills from "./Skills";
+import Button from "./Button";
+import CardChildren from "./CardChildren";
+import UseStateDemo from './topics/01-useState/UseStateDemo';
+
 
 
 function App() {
     const city = "Kochi";
+    const skills = ["React", "Node", "Laravel"];
+
+    function sayHello() {
+        alert("Hello from Parent!");
+    }
 
     return (
         <>
@@ -142,23 +154,46 @@ function App() {
               <p>City: {city}</p>
             </div>
             <div>
-            <h1>My Learning Cards</h1>
+                <h1>My Learning Cards</h1>
 
-              <Card
-                  title="React Basics"
-                  description="Learn JSX syntax and components."
-              />
+                <Card
+                    title="React Basics"
+                    description="Learn JSX syntax and components."
+                />
 
-              <Card
-                  title="JavaScript ES6"
-                  description="Practice arrow functions and destructuring."
-              />
+                <Card
+                    title="JavaScript ES6"
+                    description="Practice arrow functions and destructuring."
+                />
 
-              <Card
-                  title="TypeScript"
-                  description="Understand interfaces and types."
-              />
-          </div>
+                <Card
+                    title="TypeScript"
+                    description="Understand interfaces and types."
+                />
+            </div>
+            <UserCard name="John" />
+            <UserCard name="Alice" />
+            <UserCard name="David" />
+
+            <Product name="Laptop" price={55000} />
+            <Product name="Phone" price={25000} />
+            <Product name="Tablet" price={18000} />
+
+            <Skills skills={skills} />
+            <Button onClick={sayHello}  />
+
+             <Card>
+                <h2>React Course</h2>
+                <p>Learn Components</p>
+            </Card>
+
+            <Card>
+                <button>Buy Now</button>
+            </Card>
+
+            <div>
+                <UseStateDemo />
+            </div>
         </>
     );
 }
