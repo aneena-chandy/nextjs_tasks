@@ -57,6 +57,15 @@ function Dashboard() {
             color: "overview-pink",
             icon: "🔀",
             examples: "4 Examples"
+        },
+         {
+            number: "07",
+            title: "Dynamic UI Lists & Unique Keys",
+            description: "Display dynamic data, render lists using map()",
+            path: "/list-keys",
+            color: "overview-blue",
+            icon: "✨",
+            examples: "4 Examples"
         }
        
     ];
