@@ -15,6 +15,7 @@ const defaultTopics = [
     "Event Handling",
     "Conditional Rendering",
     "Mini Todo Application",
+    "Dynamic UI Lists & Unique Keys"
 ];
 
 const emptyForm = {
@@ -57,6 +58,10 @@ function InterviewQuestionsPage() {
     const [editingId, setEditingId] = useState(null);
     const [formData, setFormData] = useState(emptyForm);
     const [formError, setFormError] = useState("");
+
+    const [importText, setImportText] = useState("");
+    const [importError, setImportError] = useState("");
+    const [showImport, setShowImport] = useState(false);
 
     // Save questions whenever the list changes.
     useEffect(() => {
@@ -240,26 +245,39 @@ function InterviewQuestionsPage() {
             ? "React concepts currently being studied"
             : selectedTopic;
 
-        const prompt = `Generate 10 React interview questions and answers for the topic: ${topic}.
+        const prompt = `Generate exactly 10 React interview questions and answers
+                        for the topic: ${topic}.
 
-Requirements:
-1. Include Beginner, Intermediate and Advanced questions.
-2. Provide clear, detailed answers.
-3. Include practical React code examples wherever relevant.
-4. Cover concepts, real-world scenarios and best practices.
-5. Include questions suitable for Senior React Developer interviews.
-6. Return the result in this JSON format:
+                        Requirements:
 
-[
-  {
-    "topic": "${topic}",
-    "difficulty": "Beginner",
-    "source": "ChatGPT Generated",
-    "question": "Question here",
-    "answer": "Detailed answer here",
-    "code": "Code example here"
-  }
-]`;
+                        1. Include Beginner, Intermediate and Advanced questions.
+                        2. Include questions suitable for Senior React Developer interviews.
+                        3. Cover theoretical concepts and practical implementation.
+                        4. Include real-world development scenarios.
+                        5. Provide detailed, interview-ready answers.
+                        6. Include practical React or JavaScript code examples wherever relevant.
+                        7. Explain best practices and common mistakes.
+                        8. Avoid duplicate or repetitive questions.
+                        9.Create instaed of paragraph answers in points
+
+                        Return ONLY valid JSON.
+                        Do not include Markdown code fences or additional explanations.
+
+                        Use this exact JSON structure:
+
+                        [
+                            {
+                                "topic": "${topic}",
+                                "difficulty": "Beginner",
+                                "source": "ChatGPT Generated",
+                                "question": "Question here",
+                                "answer": "Detailed answer here",
+                                "code": "Code example here"
+                            }
+                        ]
+
+                        Ensure all 10 questions follow this structure.
+                        Ensure the JSON is valid and can be parsed using JSON.parse().`;
 
         try {
             await navigator.clipboard.writeText(prompt);
@@ -267,6 +285,61 @@ Requirements:
         } catch (error) {
             console.error("Unable to copy prompt:", error);
             alert("Unable to copy the prompt. Please try again.");
+        }
+    };
+
+    const handleImportQuestions = () => {
+        try {
+            const parsedQuestions = JSON.parse(importText);
+
+            if (!Array.isArray(parsedQuestions) || parsedQuestions.length === 0) {
+                setImportError("Please provide a valid JSON array.");
+                return;
+            }
+
+            const validQuestions = parsedQuestions.filter((item) => {
+                return (
+                    typeof item.topic === "string" &&
+                    typeof item.question === "string" &&
+                    typeof item.answer === "string" &&
+                    item.topic.trim() &&
+                    item.question.trim() &&
+                    item.answer.trim() &&
+                    ["Beginner", "Intermediate", "Advanced"].includes(item.difficulty)
+                );
+            });
+
+            if (validQuestions.length !== parsedQuestions.length) {
+                setImportError(
+                    "Some questions are invalid. Check topic, difficulty, question and answer fields."
+                );
+                return;
+            }
+
+            const newQuestions = validQuestions.map((item) => ({
+                id: createQuestionId(),
+                topic: item.topic.trim(),
+                difficulty: item.difficulty,
+                source: item.source || "ChatGPT Generated",
+                question: item.question.trim(),
+                answer: item.answer.trim(),
+                code: item.code || "",
+                reviewed: false,
+            }));
+
+            setQuestions((previousQuestions) => [
+                ...newQuestions,
+                ...previousQuestions,
+            ]);
+
+            setImportText("");
+            setImportError("");
+            setShowImport(false);
+
+            alert(`${newQuestions.length} questions imported successfully!`);
+
+        } catch (error) {
+            setImportError("Invalid JSON format. Please check the generated response.");
         }
     };
 
@@ -315,6 +388,17 @@ Requirements:
                     >
                         <i className="bi bi-plus-lg"></i>
                         Add Question
+                    </button>
+                    <button
+                        type="button"
+                        className="add-question-btn"
+                        onClick={() => {
+                            setShowImport(!showImport);
+                            setImportError("");
+                        }}
+                    >
+                        <i className="bi bi-file-earmark-arrow-up"></i>
+                        Import JSON
                     </button>
 
                 </div>
@@ -525,6 +609,81 @@ Requirements:
                         </div>
 
                     </form>
+
+                </div>
+            )}
+
+            {showImport && (
+                <div className="interview-form-card">
+
+                    <div className="interview-form-heading">
+                        <div>
+                            <h2>Import Interview Questions</h2>
+                            <p>
+                                Paste the JSON generated by ChatGPT to
+                                import multiple questions at once.
+                            </p>
+                        </div>
+
+                        <button
+                            type="button"
+                            className="close-form-btn"
+                            onClick={() => setShowImport(false)}
+                        >
+                            <i className="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+
+                    <div className="interview-field">
+
+                        <label htmlFor="import-json">
+                            Generated JSON *
+                        </label>
+
+                        <textarea
+                            id="import-json"
+                            value={importText}
+                            onChange={(event) =>
+                                setImportText(event.target.value)
+                            }
+                            placeholder='Paste your JSON array here...'
+                            rows="12"
+                            className="code-input"
+                        />
+
+                    </div>
+
+                    {importError && (
+                        <p className="interview-form-error">
+                            {importError}
+                        </p>
+                    )}
+
+                    <div className="interview-form-actions">
+
+                        <button
+                            type="button"
+                            className="cancel-form-btn"
+                            onClick={() => {
+                                setShowImport(false);
+                                setImportText("");
+                                setImportError("");
+                            }}
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="button"
+                            className="save-question-btn"
+                            onClick={handleImportQuestions}
+                            disabled={!importText.trim()}
+                        >
+                            <i className="bi bi-upload"></i>
+                            Import Questions
+                        </button>
+
+                    </div>
 
                 </div>
             )}
