@@ -76,6 +76,16 @@ function Dashboard() {
             color: "overview-green",
             icon: "✿",
             examples: "Examples"
+        },
+
+        {
+            number: "09",
+            title: "Product Search with API",
+            description: "API fetching, search, filters and useEffect",
+            path: "/product-search",
+            color: "overview-purple",
+            icon: "⎙",
+            examples: "Task"
         }
        
     ];
