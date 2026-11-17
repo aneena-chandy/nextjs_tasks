@@ -86,6 +86,15 @@ function Dashboard() {
             color: "overview-purple",
             icon: "⎙",
             examples: "Task"
+        },
+          {
+            number: "10",
+            title: "Fetch API and Axios",
+            description: "API fetching, http requests, and displaying data from an external source.",
+            path: "/fetch-axios",
+            color: "overview-orange",
+            icon: "☯",
+            examples: "Examples"
         }
        
     ];

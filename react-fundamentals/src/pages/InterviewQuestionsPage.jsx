@@ -16,17 +16,18 @@ const defaultTopics = [
     "Conditional Rendering",
     "Mini Todo Application",
     "Dynamic UI Lists & Unique Keys",
-    "Controlled Component and Hooks"
+    "Controlled Component and Hooks",
+    "Fetch API and Axios"
 ];
 
-const emptyForm = {
-    topic: "React Fundamentals",
+const createEmptyForm = (topic = "React Fundamentals") => ({
+    topic,
     difficulty: "Beginner",
     source: "Manual",
     question: "",
     answer: "",
     code: "",
-};
+});
 
 function getInitialQuestions() {
     try {
@@ -57,7 +58,7 @@ function InterviewQuestionsPage() {
 
     const [showForm, setShowForm] = useState(false);
     const [editingId, setEditingId] = useState(null);
-    const [formData, setFormData] = useState(emptyForm);
+    const [formData, setFormData] = useState(() => createEmptyForm());
     const [formError, setFormError] = useState("");
 
     const [importText, setImportText] = useState("");
@@ -122,7 +123,11 @@ function InterviewQuestionsPage() {
 
     const openAddForm = () => {
         setEditingId(null);
-        setFormData(emptyForm);
+        setFormData(
+            createEmptyForm(
+                selectedTopic !== "All Topics" ? selectedTopic : "React Fundamentals"
+            )
+        );
         setFormError("");
         setShowForm(true);
     };
@@ -201,7 +206,7 @@ function InterviewQuestionsPage() {
 
         setShowForm(false);
         setEditingId(null);
-        setFormData(emptyForm);
+        setFormData(createEmptyForm());
         setFormError("");
     };
 

@@ -10,8 +10,10 @@ import InterviewQuestionsPage from "./pages/InterviewQuestionsPage";
 import ListAndKeysPage from "./pages/ListAndKeysPage";
 import CustomHooksPage from "./pages/CustomHooksPage";
 import ProductSearchPage from "./pages/ProductSearchPage";
+import ProductAxiosPage from "./pages/ProductAxiosPage";
 
 import "./App.css";
+
 
 function App() {
 
@@ -37,7 +39,7 @@ function App() {
                 <Route path="/list-keys" element={<ListAndKeysPage />}/>
                 <Route path="/components-hooks" element={<CustomHooksPage />}/>
                 <Route path="/product-search" element={<ProductSearchPage />}/>
-                
+                <Route path="/fetch-axios" element={<ProductAxiosPage />}/>
 
             </Routes>
 
