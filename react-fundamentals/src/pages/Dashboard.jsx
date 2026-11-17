@@ -66,6 +66,16 @@ function Dashboard() {
             color: "overview-blue",
             icon: "✨",
             examples: "4 Examples"
+        },
+
+         {
+            number: "08",
+            title: "Controlled Components and Custom Hooks",
+            description: "Reusable JavaScript function that allows you to share stateful logic between React components.",
+            path: "/components-hooks",
+            color: "overview-green",
+            icon: "✿",
+            examples: "Examples"
         }
        
     ];

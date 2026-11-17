@@ -15,7 +15,8 @@ const defaultTopics = [
     "Event Handling",
     "Conditional Rendering",
     "Mini Todo Application",
-    "Dynamic UI Lists & Unique Keys"
+    "Dynamic UI Lists & Unique Keys",
+    "Controlled Component and Hooks"
 ];
 
 const emptyForm = {

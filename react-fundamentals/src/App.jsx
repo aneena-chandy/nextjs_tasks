@@ -8,6 +8,7 @@ import EventHandlingPage from "./pages/EventHandlingPage";
 import ConditionalRenderingPage from "./pages/ConditionalRenderingPage";
 import InterviewQuestionsPage from "./pages/InterviewQuestionsPage";
 import ListAndKeysPage from "./pages/ListAndKeysPage";
+import CustomHooksPage from "./pages/CustomHooksPage";
 
 import "./App.css";
 
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/conditional-rendering" element={<ConditionalRenderingPage />} />
                 <Route path="/interview-questions" element={<InterviewQuestionsPage />}/>
                 <Route path="/list-keys" element={<ListAndKeysPage />}/>
+                <Route path="/components-hooks" element={<CustomHooksPage />}/>
 
             </Routes>
 
