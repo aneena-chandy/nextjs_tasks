@@ -95,6 +95,15 @@ function Dashboard() {
             color: "overview-orange",
             icon: "☯",
             examples: "Examples"
+        },
+         {
+            number: "11",
+            title: "Context API & useReducer",
+            description: "Learn global state management using Context API and useReducer through a practical Expense Tracker.",
+            path: "/context-api",
+            color: "overview-green",
+            icon: "☯",
+            examples: "Examples"
         }
        
     ];
