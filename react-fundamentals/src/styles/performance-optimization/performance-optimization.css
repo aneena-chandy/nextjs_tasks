@@ -1,0 +1,890 @@
+
+/* =========================================
+   PERFORMANCE OPTIMIZATION - INTRODUCTION
+========================================= */
+
+.performance-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 30px;
+    margin-bottom: 35px;
+    background: linear-gradient(135deg, #f1edff, #f8f7ff);
+    border: 1px solid #e4dcff;
+    border-radius: 18px;
+}
+
+.performance-intro-icon {
+    min-width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 16px;
+    font-size: 32px;
+}
+
+.performance-intro h2 {
+    margin: 0 0 10px;
+    color: #29204f;
+    font-size: 23px;
+}
+
+.performance-intro p {
+    color: #66617b;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.performance-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 18px;
+}
+
+.performance-tags span {
+    padding: 7px 13px;
+    border-radius: 20px;
+    background: #ffffff;
+    color: #6951bd;
+    border: 1px solid #e3dcff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.performance-section-heading {
+    margin: 45px 0 22px;
+}
+
+.performance-section-heading > span {
+    color: #7657d6;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.performance-section-heading h2 {
+    color: #24213b;
+    font-size: 25px;
+    margin: 9px 0;
+}
+
+.performance-section-heading p {
+    color: #77758b;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* =========================================
+   COMMON DEMO STYLES
+========================================= */
+
+.perf-demo {
+    width: 100%;
+    color: #29283b;
+}
+
+.perf-demo-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.perf-demo-header h3 {
+    font-size: 17px;
+    margin: 0 0 5px;
+    color: #29283b;
+}
+
+.perf-demo-header p {
+    font-size: 13px;
+    color: #858397;
+    margin: 0;
+}
+
+.perf-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    font-size: 23px;
+}
+
+.perf-icon.purple {
+    background: #eee9ff;
+}
+
+.perf-icon.green {
+    background: #e3f8ed;
+}
+
+.perf-icon.orange {
+    background: #fff0df;
+}
+
+.perf-icon.blue {
+    background: #e5f1ff;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.perf-primary-btn,
+.perf-secondary-btn {
+    border: none;
+    padding: 11px 17px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.perf-primary-btn {
+    background: #7055d9;
+    color: #ffffff;
+}
+
+.perf-primary-btn:hover {
+    background: #5940bd;
+    transform: translateY(-1px);
+}
+
+.perf-secondary-btn {
+    background: #f0edfa;
+    color: #6550b1;
+    border: 1px solid #e3ddf5;
+}
+
+.perf-secondary-btn:hover {
+    background: #e7e1f7;
+}
+
+.perf-primary-btn:disabled,
+.perf-secondary-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.perf-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* =========================================
+   COUNTER
+========================================= */
+
+.perf-counter-box {
+    background: #f8f7fc;
+    border: 1px solid #ebe8f4;
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+    flex: 1;
+}
+
+.perf-counter-box > span {
+    color: #77758a;
+    font-size: 13px;
+}
+
+.perf-counter-box h2 {
+    color: #7055d9;
+    font-size: 36px;
+    margin: 12px 0 18px;
+}
+
+.perf-counter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+/* =========================================
+   RESULT AND INFO BOXES
+========================================= */
+
+.perf-result-box {
+    padding: 20px;
+    margin-top: 20px;
+    background: #f8faff;
+    border: 1px solid #e3eafa;
+    border-radius: 13px;
+}
+
+.perf-result-heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.perf-optimized {
+    background: #dcf7e7;
+    color: #23844c;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-left: auto;
+}
+
+.perf-info {
+    padding: 16px 19px;
+    margin-top: 22px;
+    background: #fffaf0;
+    border-left: 4px solid #e9ad46;
+    border-radius: 8px;
+}
+
+.perf-info strong {
+    display: block;
+    font-size: 13px;
+    color: #79551c;
+    margin-bottom: 7px;
+}
+
+.perf-info p {
+    color: #786a54;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 4px 0;
+}
+
+/* =========================================
+   USER PROFILE
+========================================= */
+
+.perf-user-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 18px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #e7e9f1;
+    border-radius: 12px;
+}
+
+.perf-avatar {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee9ff;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.perf-user-card h3 {
+    font-size: 15px;
+    margin: 0 0 5px;
+}
+
+.perf-user-card p {
+    color: #77758a;
+    font-size: 12px;
+    margin: 0 0 7px;
+}
+
+.perf-status {
+    color: #218653;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* =========================================
+   EXPENSE SUMMARY
+========================================= */
+
+.perf-total-card {
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    background: linear-gradient(120deg, #e8f8ee, #f3fbf5);
+    border: 1px solid #d8f0e0;
+}
+
+.perf-total-card > span {
+    color: #5a8669;
+    font-size: 13px;
+}
+
+.perf-total-card h2 {
+    font-size: 32px;
+    color: #218653;
+    margin: 10px 0;
+}
+
+.perf-total-card small {
+    color: #769982;
+}
+
+.perf-expense-list,
+.perf-transaction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.perf-expense-item,
+.perf-transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #ffffff;
+    border: 1px solid #ecebf2;
+    border-radius: 10px;
+}
+
+.perf-expense-item span {
+    color: #656276;
+    font-size: 13px;
+}
+
+.perf-expense-item strong,
+.perf-transaction > strong {
+    color: #343047;
+    font-size: 14px;
+}
+
+.perf-filter-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.perf-select,
+.perf-search-input {
+    width: 100%;
+    min-width: 0;
+    height: 45px;
+    padding: 0 14px;
+    border: 1px solid #e2e0eb;
+    background: #ffffff;
+    border-radius: 9px;
+    outline: none;
+    color: #343047;
+    font-size: 13px;
+}
+
+.perf-search-input:focus,
+.perf-select:focus {
+    border-color: #8269dc;
+    box-shadow: 0 0 0 3px rgba(112, 85, 217, 0.09);
+}
+
+.perf-analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+    margin: 20px 0;
+}
+
+.perf-analytics-card {
+    padding: 17px;
+    background: #f7f6fc;
+    border: 1px solid #eae7f4;
+    border-radius: 11px;
+}
+
+.perf-analytics-card span {
+    font-size: 12px;
+    color: #77758b;
+}
+
+.perf-analytics-card h3 {
+    margin: 10px 0 0;
+    color: #6951bd;
+    font-size: 19px;
+}
+
+.perf-transaction > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.perf-transaction > div strong {
+    font-size: 13px;
+}
+
+.perf-transaction > div span {
+    color: #858397;
+    font-size: 11px;
+}
+
+/* =========================================
+   SEARCH AND STATS
+========================================= */
+
+.perf-search-stats,
+.perf-list-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.perf-search-stats > div,
+.perf-list-stats > div {
+    padding: 18px;
+    background: #f7f6fc;
+    border: 1px solid #eae7f4;
+    border-radius: 11px;
+}
+
+.perf-search-stats span,
+.perf-list-stats span {
+    color: #858397;
+    font-size: 12px;
+}
+
+.perf-search-stats h2,
+.perf-list-stats h2 {
+    color: #7055d9;
+    font-size: 25px;
+    margin: 9px 0 0;
+}
+
+.perf-search-result {
+    padding: 17px;
+    margin-top: 15px;
+    border: 1px solid #e6e0f8;
+    background: #f7f4ff;
+    border-radius: 10px;
+}
+
+.perf-search-result span {
+    font-size: 12px;
+    color: #8276a9;
+}
+
+.perf-search-result h3 {
+    font-size: 17px;
+    color: #654cb9;
+    margin: 9px 0 0;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   LAZY LOADING
+========================================= */
+
+.perf-lazy-placeholder {
+    min-height: 220px;
+    padding: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #f5f8ff;
+    border: 1px dashed #c9d8f3;
+    border-radius: 14px;
+}
+
+.perf-lazy-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.perf-lazy-placeholder h3,
+.perf-lazy-panel h3 {
+    margin: 8px 0;
+    color: #343b64;
+}
+
+.perf-lazy-placeholder p,
+.perf-lazy-panel p {
+    color: #777e9a;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.perf-lazy-panel {
+    width: 100%;
+}
+
+.perf-lazy-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 18px;
+}
+
+.perf-lazy-details span {
+    background: #e4f5eb;
+    color: #25804d;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.perf-loading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #6951bd;
+    font-size: 13px;
+}
+
+.perf-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #e4dcff;
+    border-top-color: #7055d9;
+    border-radius: 50%;
+    animation: perf-spin 0.8s linear infinite;
+}
+
+@keyframes perf-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================
+   USER DIRECTORY
+========================================= */
+
+.perf-task-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.perf-task-heading h3 {
+    font-size: 18px;
+    margin: 0 0 6px;
+}
+
+.perf-task-heading p {
+    color: #858397;
+    font-size: 12px;
+    margin: 0;
+}
+
+.perf-task-count {
+    padding: 8px 12px;
+    background: #eee9ff;
+    color: #6951bd;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.perf-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.perf-directory-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px;
+    min-width: 0;
+    border: 1px solid #eae8f1;
+    background: #ffffff;
+    border-radius: 12px;
+    transition: 0.2s ease;
+}
+
+.perf-directory-card:hover {
+    border-color: #c9bafa;
+    transform: translateY(-2px);
+}
+
+.perf-directory-avatar {
+    min-width: 43px;
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #eee9ff;
+    color: #6951bd;
+    font-weight: 750;
+    font-size: 14px;
+}
+
+.perf-directory-details {
+    min-width: 0;
+}
+
+.perf-directory-details h3 {
+    font-size: 13px;
+    margin: 0 0 5px;
+    overflow-wrap: anywhere;
+}
+
+.perf-directory-details p {
+    font-size: 11px;
+    color: #858397;
+    margin: 0 0 8px;
+}
+
+.perf-directory-details span {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 650;
+    color: #25804d;
+    background: #e6f7ed;
+    border-radius: 20px;
+    padding: 5px 9px;
+}
+
+/* =========================================
+   PRODUCT SEARCH
+========================================= */
+
+.perf-product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.perf-product-card {
+    padding: 19px;
+    background: #ffffff;
+    border: 1px solid #eae8f1;
+    border-radius: 13px;
+    transition: 0.2s ease;
+}
+
+.perf-product-card:hover {
+    border-color: #c9bafa;
+    transform: translateY(-2px);
+}
+
+.perf-product-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1edff;
+    border-radius: 13px;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.perf-product-category {
+    font-size: 10px;
+    color: #7055d9;
+    background: #f1edff;
+    padding: 5px 9px;
+    border-radius: 15px;
+}
+
+.perf-product-card h3 {
+    font-size: 14px;
+    margin: 14px 0 10px;
+}
+
+.perf-product-card > strong {
+    color: #25804d;
+    font-size: 15px;
+}
+
+/* =========================================
+   LARGE LIST
+========================================= */
+
+.perf-list-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.perf-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.perf-pagination > span {
+    font-size: 12px;
+    color: #77758b;
+}
+
+.perf-large-list {
+    max-height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 5px;
+}
+
+.perf-large-list-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 12px;
+    background: #faf9fd;
+    border: 1px solid #eeecf4;
+    border-radius: 9px;
+}
+
+.perf-large-list-item > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.perf-large-list-item strong {
+    font-size: 12px;
+}
+
+.perf-large-list-item span {
+    color: #858397;
+    font-size: 11px;
+}
+
+/* =========================================
+   EMPTY STATES
+========================================= */
+
+.perf-empty {
+    width: 100%;
+    padding: 30px 15px;
+    text-align: center;
+    color: #858397;
+    background: #faf9fd;
+    border: 1px dashed #e1deeb;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+/* =========================================
+   COMPLETION SECTION
+========================================= */
+
+.performance-completion {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 24px;
+    margin-top: 35px;
+    background: #eaf8f0;
+    border: 1px solid #d4eddf;
+    border-radius: 14px;
+}
+
+.performance-completion > span {
+    font-size: 35px;
+}
+
+.performance-completion h3 {
+    color: #237348;
+    font-size: 17px;
+    margin: 0 0 7px;
+}
+
+.performance-completion p {
+    color: #63846e;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .performance-intro {
+        padding: 20px;
+    }
+
+    .performance-section-heading h2 {
+        font-size: 21px;
+    }
+
+    .perf-directory-grid,
+    .perf-product-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .performance-intro {
+        flex-direction: column;
+    }
+
+    .performance-intro h2 {
+        font-size: 19px;
+    }
+
+    .perf-counter-grid,
+    .perf-analytics-grid,
+    .perf-search-stats,
+    .perf-list-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .perf-filter-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .perf-task-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .perf-actions {
+        flex-direction: column;
+    }
+
+    .perf-actions button {
+        width: 100%;
+    }
+
+    .perf-pagination {
+        justify-content: center;
+    }
+
+    .performance-completion {
+        align-items: flex-start;
+        padding: 18px;
+    }
+
+}

@@ -12,6 +12,7 @@ import CustomHooksPage from "./pages/CustomHooksPage";
 import ProductSearchPage from "./pages/ProductSearchPage";
 import ProductAxiosPage from "./pages/ProductAxiosPage";
 import ExpenseTrackerPage from "./pages/ExpenseTrackerPage";
+import PerformanceOptimizationPage from "./pages/PerformanceOptimizationPage";
 
 import "./App.css";
 
@@ -42,6 +43,7 @@ function App() {
                 <Route path="/product-search" element={<ProductSearchPage />}/>
                 <Route path="/fetch-axios" element={<ProductAxiosPage />}/>
                 <Route path="/context-api" element={<ExpenseTrackerPage />}/>
+                <Route path="/performance-optimization" element={<PerformanceOptimizationPage />}/>
 
             </Routes>
 

@@ -17,7 +17,8 @@ const defaultTopics = [
     "Mini Todo Application",
     "Dynamic UI Lists & Unique Keys",
     "Controlled Component and Hooks",
-    "Fetch API and Axios"
+    "Fetch API and Axios",
+    "Context API & useReducer"
 ];
 
 const createEmptyForm = (topic = "React Fundamentals") => ({

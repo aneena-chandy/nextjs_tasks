@@ -104,6 +104,15 @@ function Dashboard() {
             color: "overview-green",
             icon: "☯",
             examples: "Examples"
+        },
+        {
+            number: "12",
+            title: "React Performance Optimization",
+            description: "Optimize rendering, improve application speed and build efficient React applications.",
+            path: "/performance-optimization",
+            color: "overview-purple",
+            icon: "🚀",
+            examples: "5 Concepts + 4 Tasks"
         }
        
     ];
